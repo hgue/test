@@ -3,6 +3,7 @@
 ****************************************************************************/
 #define __MAIN_C__
 
+
 #include "stm32f10x.h"
 #include "stm32f10x_conf.h"
 
@@ -14,12 +15,13 @@
 /*  DEFINE: Prototypes                                                     */
 /*=========================================================================*/
 
+#define LED3                             3
 #define LEDn                             2
 #define LED1_PIN                         GPIO_Pin_1 // green
 #define LED1_GPIO_PORT                   GPIOB
 #define LED1_GPIO_CLK                    RCC_APB2Periph_GPIOB
 
-#define LED2_PIN                         GPIO_Pin_2
+#define CONT_PIN                         GPIO_Pin_2
 #define LED2_GPIO_PORT                   GPIOB
 #define LED2_GPIO_CLK                    RCC_APB2Periph_GPIOB
 
@@ -27,7 +29,7 @@
 /*=========================================================================*/
 /*  DEFINE: Definition of all local Data                                   */
 /*=========================================================================*/
-GPIO_InitTypeDef GPIO_InitStructure;
+GPIO_InitTypeDef GPIO_Structure;
 GPIO_TypeDef* GPIO_PORT[LEDn] = {LED1_GPIO_PORT, LED2_GPIO_PORT};
 const uint16_t GPIO_PIN[LEDn] = {LED1_PIN, LED2_PIN};
 
@@ -38,6 +40,11 @@ const uint16_t GPIO_PIN[LEDn] = {LED1_PIN, LED2_PIN};
 /*=========================================================================*/
 /*  DEFINE: All code exported                                              */
 /*=========================================================================*/
+
+void testloop()
+{
+    Remove me!
+}
 
 void delayLoop() {
     volatile uint32_t delayCount = 500000; // volatile, um "Wegoptimieren" zu vermeinden
