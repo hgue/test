@@ -1,0 +1,17 @@
+set complaints 1
+
+set output-radix 0x10
+set input-radix 0x10
+
+set endian little
+
+dir .
+set prompt (arm-gdb)
+
+file test_ram.elf
+
+# connect to openOCD running on gdb port 3333
+target remote localhost:3333
+
+load
+monitor reset halt
