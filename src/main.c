@@ -15,13 +15,9 @@
 /*  DEFINE: Prototypes                                                     */
 /*=========================================================================*/
 
-#define LED3                             3
-#define LEDn                             2
-#define LED1_PIN                         GPIO_Pin_1 // green
-#define LED1_GPIO_PORT                   GPIOB
 #define LED1_GPIO_CLK                    RCC_APB2Periph_GPIOB
 
-#define CONT_PIN                         GPIO_Pin_2
+#define DUMMY_PIN                         GPIO_Pin_2
 #define LED2_GPIO_PORT                   GPIOB
 #define LED2_GPIO_CLK                    RCC_APB2Periph_GPIOB
 
